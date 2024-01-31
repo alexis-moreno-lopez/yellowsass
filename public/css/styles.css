@@ -1,2 +1,60 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-@import url("/assets/scss/partials/_color.scss");
+* {
+  font-family: "Poppins";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+#header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  padding: 10px 20% 0 20%;
+  justify-content: space-between; }
+  #header > div {
+    width: 150px; }
+  #header > nav {
+    display: flex; }
+    #header > nav > ul {
+      display: flex;
+      gap: 20px; }
+      #header > nav > ul li {
+        list-style-type: none;
+        color: white;
+        display: flex;
+        align-items: center; }
+
+#home {
+  height: 100vh;
+  background-image: url("/assets/images/bkg-hero-header.jpg");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  #home > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    gap: 3rem; }
+    #home > div > h1 {
+      font-size: 4rem; }
+      #home > div > h1 span {
+        color: #ffb81c; }
+    #home > div > div {
+      margin-top: 40px;
+      display: flex;
+      gap: 30px; }
+      #home > div > div > a {
+        text-decoration: none;
+        color: inherit;
+        padding: 10px 50px; }
+      #home > div > div > a:nth-child(1) {
+        border: 2px solid white;
+        background-color: rgba(0, 0, 0, 0.3); }
+      #home > div > div > a:nth-child(2) {
+        background-color: #ffb81c;
+        border: 2px solid #ffb81c; }
