@@ -114,15 +114,28 @@
     width: 10px;
     height: 10px;
     border: 1px solid white;
-    border-radius: 100%;
-    background-color: white; }
+    border-radius: 100%; }
+    #testimonials > div > div:not(:first-child) {
+      background-color: white; }
+  #testimonials .msg-bubble {
+    width: 90%;
+    color: white;
+    text-align: center;
+    background-color: #6a4d96;
+    padding-top: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+    margin-top: 30px; }
   #testimonials > div:last-child {
     display: flex;
     gap: 10px; }
   #testimonials p {
     font-weight: bold;
     color: white;
-    margin-bottom: 50px; }
+    font-size: 20px;
+    margin-bottom: 50px;
+    margin-top: 50px; }
 
 #services {
   padding: 70px 20%;
@@ -138,3 +151,17 @@
     margin-top: 50px;
     display: flex;
     justify-content: space-between; }
+    #services > div article {
+      width: 30%; }
+      #services > div article:nth-child(1) > h3 {
+        color: #f18b6d; }
+      #services > div article:nth-child(2) > h3 {
+        color: #ffb81c; }
+      #services > div article:nth-child(3) > h3 {
+        color: #6a4d96; }
+    #services > div h3 {
+      text-align: center;
+      font-weight: bolder;
+      margin-bottom: 15px; }
+    #services > div p {
+      text-align: center; }

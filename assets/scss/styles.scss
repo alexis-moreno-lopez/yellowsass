@@ -162,9 +162,25 @@
       height: 10px;
       border: 1px solid white;
       border-radius: 100%;
-      background-color: white;
+      // background-color: white;
+      &:not(:first-child){
+        background-color: white;
+      }
     }
   
+    
+  }
+
+  .msg-bubble{
+    width: 90%;
+    color: white;
+    text-align: center;
+    background-color: $purple;
+    padding-top: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+    margin-top: 30px;
   }
 
   & > div:last-child {
@@ -175,7 +191,9 @@
   p {
     font-weight: bold;
     color: white;
+    font-size: 20px;
     margin-bottom: 50px;
+    margin-top: 50px;
   }
 
 
@@ -195,5 +213,27 @@
     margin-top: 50px;
     display: flex;
     justify-content: space-between;
+    article{
+      width: 30%;
+      &:nth-child(1) > h3{
+        color: $blood-orange;
+      }
+
+      &:nth-child(2) > h3{
+        color: $yellow;
+      }
+
+      &:nth-child(3) > h3{
+        color: $purple;
+      }
+    }
+    h3 {
+      text-align: center;
+      font-weight: bolder;
+      margin-bottom: 15px;
+    }
+    p {
+      text-align: center;
+    }
   }
 }
