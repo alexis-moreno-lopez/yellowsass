@@ -118,6 +118,7 @@
     #testimonials > div > div:not(:first-child) {
       background-color: white; }
   #testimonials .msg-bubble {
+    position: relative;
     width: 90%;
     color: white;
     text-align: center;
@@ -127,6 +128,15 @@
     padding-right: 30px;
     padding-bottom: 20px;
     margin-top: 30px; }
+    #testimonials .msg-bubble::after {
+      content: '';
+      position: absolute;
+      bottom: -20%;
+      left: 50%;
+      transform: translateX(-50%);
+      border-width: 15px;
+      border-style: solid;
+      border-color: #6a4d96 transparent transparent transparent; }
   #testimonials > div:last-child {
     display: flex;
     gap: 10px; }

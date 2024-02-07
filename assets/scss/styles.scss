@@ -172,6 +172,7 @@
   }
 
   .msg-bubble{
+    position: relative;
     width: 90%;
     color: white;
     text-align: center;
@@ -181,6 +182,17 @@
     padding-right: 30px;
     padding-bottom: 20px;
     margin-top: 30px;
+
+    &::after{
+      content: '';
+      position: absolute;
+      bottom: -20%; 
+      left: 50%; 
+      transform: translateX(-50%);
+      border-width: 15px; 
+      border-style: solid;
+      border-color:$purple transparent transparent transparent; 
+    }
   }
 
   & > div:last-child {
