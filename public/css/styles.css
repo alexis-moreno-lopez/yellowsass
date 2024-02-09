@@ -99,6 +99,7 @@
 
 #testimonials {
   background-image: url("/assets/images/bkg-testimonial.jpg");
+  background-size: cover;
   padding: 70px 20%;
   display: flex;
   flex-direction: column;
@@ -129,7 +130,7 @@
     padding-bottom: 20px;
     margin-top: 30px; }
     #testimonials .msg-bubble::after {
-      content: '';
+      content: "";
       position: absolute;
       bottom: -20%;
       left: 50%;
@@ -162,16 +163,136 @@
     display: flex;
     justify-content: space-between; }
     #services > div article {
-      width: 30%; }
+      width: 30%;
+      display: flex;
+      align-items: center;
+      flex-direction: column; }
       #services > div article:nth-child(1) > h3 {
         color: #f18b6d; }
       #services > div article:nth-child(2) > h3 {
         color: #ffb81c; }
       #services > div article:nth-child(3) > h3 {
         color: #6a4d96; }
+      #services > div article > div {
+        width: 30px; }
     #services > div h3 {
       text-align: center;
       font-weight: bolder;
       margin-bottom: 15px; }
     #services > div p {
-      text-align: center; }
+      text-align: center;
+      color: #70767d; }
+
+#latest-news {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #222f36;
+  padding: 70px 20%; }
+  #latest-news > h2 {
+    color: white;
+    font-size: 2rem;
+    font-weight: bolder;
+    margin-bottom: 5px; }
+  #latest-news p {
+    color: #70767d; }
+  #latest-news > p {
+    margin-bottom: 50px; }
+  #latest-news > a {
+    width: 150px;
+    height: 35px;
+    background-color: #ffb81c;
+    border-radius: 3px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; }
+    #latest-news > a > div {
+      width: 15px; }
+    #latest-news > a > p {
+      font-size: 13px;
+      font-weight: bold;
+      color: white; }
+  #latest-news > div {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between; }
+    #latest-news > div > article {
+      width: 30%;
+      background-color: white;
+      border-radius: 3px; }
+      #latest-news > div > article > div > h3 {
+        font-weight: bolder;
+        color: #585d62;
+        margin-bottom: 40px; }
+      #latest-news > div > article > div > p {
+        color: #70767d;
+        font-size: 12px;
+        margin-bottom: 40px; }
+      #latest-news > div > article > div > a {
+        width: 150px;
+        height: 35px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        color: #ffb81c; }
+        #latest-news > div > article > div > a > div {
+          width: 15px; }
+      #latest-news > div > article > div:last-child {
+        padding: 20px; }
+
+#figure-transition {
+  background-image: url("/assets/images/bkg-counter.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 40px 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  #figure-transition > div {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    font-weight: bold; }
+    #figure-transition > div > span {
+      font-size: 50px; }
+    #figure-transition > div:nth-child(2) {
+      border-left: 1px solid white;
+      border-right: 1px solid white; }
+
+#contact-us {
+  padding: 30px 20%; }
+
+footer #links {
+  background-color: #2e2e2e;
+  padding: 30px 20%;
+  display: flex;
+  gap: 200px; }
+  footer #links > ul > h3 {
+    color: white;
+    margin-bottom: 20px; }
+  footer #links > ul > li {
+    list-style-type: none;
+    color: #70767d;
+    font-size: 13px;
+    margin-bottom: 5px; }
+    footer #links > ul > li > i {
+      margin-right: 5px; }
+
+footer #lower-part {
+  background-color: #212121;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px; }
+  footer #lower-part > p {
+    color: white; }
+    footer #lower-part > p > span {
+      color: #70767d; }

@@ -1,12 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @import "./partials/color";
+@import "./partials/mixins";
 
-@mixin title-2($color, $margin-bottom) {
-  color: $color;
-  font-size: 2rem;
-  font-weight: bolder;
-  margin-bottom: $margin-bottom;
-}
+
 
 * {
   font-family: "Poppins";
@@ -115,34 +111,35 @@
 }
 
 #projects {
-    background-color: $background-lightgray;
+  background-color: $background-lightgray;
 
-  &>div:nth-child(1) {
+  & > div:nth-child(1) {
     padding: 70px 20%;
     display: flex;
     flex-direction: column;
     align-items: center;
 
     & > h2 {
-        @include title-2($black, 10px); 
+      @include title-2($black, 10px);
     }
 
     & > p {
-        color: $text-lightgray;
-        text-align: center;
+      color: $text-lightgray;
+      text-align: center;
     }
   }
 
-  &>div:nth-child(2) {
+  & > div:nth-child(2) {
     display: flex;
     & > img {
-        width: 25%;
+      width: 25%;
     }
   }
 }
 
 #testimonials {
-  background-image: url('/assets/images/bkg-testimonial.jpg');
+  background-image: url("/assets/images/bkg-testimonial.jpg");
+  background-size: cover;
   padding: 70px 20%;
   display: flex;
   flex-direction: column;
@@ -163,15 +160,13 @@
       border: 1px solid white;
       border-radius: 100%;
       // background-color: white;
-      &:not(:first-child){
+      &:not(:first-child) {
         background-color: white;
       }
     }
-  
-    
   }
 
-  .msg-bubble{
+  .msg-bubble {
     position: relative;
     width: 90%;
     color: white;
@@ -183,15 +178,15 @@
     padding-bottom: 20px;
     margin-top: 30px;
 
-    &::after{
-      content: '';
+    &::after {
+      content: "";
       position: absolute;
-      bottom: -20%; 
-      left: 50%; 
+      bottom: -20%;
+      left: 50%;
       transform: translateX(-50%);
-      border-width: 15px; 
+      border-width: 15px;
       border-style: solid;
-      border-color:$purple transparent transparent transparent; 
+      border-color: $purple transparent transparent transparent;
     }
   }
 
@@ -207,8 +202,6 @@
     margin-bottom: 50px;
     margin-top: 50px;
   }
-
-
 }
 
 #services {
@@ -225,18 +218,25 @@
     margin-top: 50px;
     display: flex;
     justify-content: space-between;
-    article{
+    article {
       width: 30%;
-      &:nth-child(1) > h3{
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      &:nth-child(1) > h3 {
         color: $blood-orange;
       }
 
-      &:nth-child(2) > h3{
+      &:nth-child(2) > h3 {
         color: $yellow;
       }
 
-      &:nth-child(3) > h3{
+      &:nth-child(3) > h3 {
         color: $purple;
+      }
+
+      & > div {
+        width: 30px;
       }
     }
     h3 {
@@ -246,6 +246,178 @@
     }
     p {
       text-align: center;
+      color: $text-lightgray;
+    }
+  }
+}
+
+#latest-news {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $bluish-black;
+  padding: 70px 20%;
+
+  & > h2 {
+    @include title-2(white, 5px);
+  }
+  p{
+    color: $text-lightgray;
+  }
+
+  &>p{
+      margin-bottom: 50px;
+  }
+
+  >a {
+    width: 150px;
+    height: 35px;
+    background-color: $yellow;
+    border-radius: 3px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+
+    >div{
+      width: 15px;
+      
+    }
+
+    >p {
+      font-size: 13px;
+      font-weight: bold;
+      color: white;
+    }
+  }
+
+  >div {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+
+    >article{
+      width: 30%;
+      background-color: white;
+      border-radius: 3px;
+
+      >div{
+        >h3{
+          font-weight: bolder;
+          color: darken($text-lightgray, 10%);
+          margin-bottom: 40px;
+        }
+
+        >p {
+          color: $text-lightgray;
+          font-size: 12px;
+          margin-bottom: 40px;
+        }
+
+        >a {
+          width: 150px;
+          height: 35px;
+          text-decoration: none;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+          color: $yellow;
+      
+          >div{
+            width: 15px;
+            
+          }
+        }
+        
+
+        &:last-child{
+          padding: 20px;
+        }
+      }
+      
+    }
+  }
+}
+
+#figure-transition {
+  
+  background-image: url('/assets/images/bkg-counter.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 40px 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  >div{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    font-weight: bold;
+
+    >span{
+      font-size: 50px;
+    }
+
+    &:nth-child(2){
+      border-left: 1px solid white;
+      border-right: 1px solid white;
+    }
+  }
+
+}
+
+#contact-us {
+  padding: 30px 20%;
+}
+
+
+footer{
+
+  #links{
+    background-color: darken($color: $black, $amount: 15%);
+    padding: 30px 20%;
+    display: flex;
+    gap: 200px;
+    >ul{
+
+      >h3{
+        color: white;
+        margin-bottom: 20px;
+      }
+
+      >li{
+        list-style-type: none;
+        color: $text-lightgray;
+        font-size: 13px;
+        margin-bottom: 5px;
+        >i{
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+
+  #lower-part{
+    background-color: darken($black, 20%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    >p{
+      color: white;
+      >span{
+        color: $text-lightgray
+      }
     }
   }
 }
